@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="victor.gabriel" id="1">
+        <preConditions onError="MARK_RAN" onErrorMessage="TABELA ENDERECO JA EXISTE">
+            <not>
+                <tableExists tableName="ENDERECO"/>
+            </not>
+        </preConditions>
+        <createTable tableName="ENDERECO">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="CEP" type="varchar(8)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RUA" type="varchar(120)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BAIRRO" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ID_CIDADE" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="ID_CIDADE"
+                                 baseTableName="ENDERECO"
+                                 constraintName="FK_ENDERECO_CIDADE"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="CIDADE"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="victor.gabriel" id="1">
+        <preConditions onError="MARK_RAN" onErrorMessage="TABELA CIDADE JA EXISTE">
+            <not>
+                <tableExists tableName="CIDADE"/>
+            </not>
+        </preConditions>
+        <createTable tableName="CIDADE">
+            <column name="ID" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="IBGE" type="numeric">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOME" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UF" type="varchar(2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
