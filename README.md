@@ -2,7 +2,7 @@
 
 ## Estratégia
 
-A estrategia para o desenvolvimento foi utilizar ferramentas e frameworks que estou habituado. Durante o desenvolvimento separei as informações necessárias para apresentação dos dados em duas classes, uma mapeando os dados de Cidade e outra mapeando os dados de Endereço onde a classe Endereço esta diretamente ligada a classe de Cidade.
+A estrategia para o desenvolvimento foi utilizar ferramentas e frameworks que estou habituado facilitando assim todo o processo de desenvolvimento. Separei as informações necessárias para apresentação dos dados em duas classes, uma mapeando os dados de ```Cidade``` e outra mapeando os dados de Endereço onde a classe ```Endereco``` esta diretamente ligada a classe de ```Cidade```.
 Foi criado endpoints simples de cadastro tanto para Cidade quanto para o Endereço para facilitar a avaliação da regra solicitada, mantive também os registros cadastrados em um banco relacional, mantendo os mocks apenas para os testes. Utilizei o heroku para fazer o deploy da documentação junto com a aplicação.
 
 A documentação do sistema pode ser acessada pelo link https://cep-rest-api.herokuapp.com/swagger-ui/ onde pode ser feita todas as operações disponibilizadas pela aplicação.
