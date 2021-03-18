@@ -17,4 +17,4 @@ A documentação do sistema pode ser acessada pelo link https://cep-rest-api.her
 5. [Heroku](https://www.heroku.com/)
 
 ### Padrão de projeto 
-Foi utilizado o padrão MFC aplicando os princípios de SOLID.
+Foi utilizado o padrão MVC aplicando os princípios de SOLID.
