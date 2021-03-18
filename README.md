@@ -7,6 +7,14 @@ Foi criado endpoints simples de cadastro tanto para Cidade quanto para o Endere�
 
 A documentação do sistema pode ser acessada pelo link https://cep-rest-api.herokuapp.com/swagger-ui/ onde pode ser feita todas as operações disponibilizadas pela aplicação.
 
+Alguns registros ja foram previamente cadastrados e podem ser utilizados durante a avaliação.
+
+- 86801360
+- 86802781
+- 86806570
+- 86803400
+- 86807600
+
 ## Arquitetura 
 
 ### Para o desenvolvimento deste serviço foram utilizadas os seguintes Framerowk/Ferramenta.
